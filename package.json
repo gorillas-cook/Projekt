@@ -1,0 +1,38 @@
+{
+  "name": "projekt-stripe-marketplace",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepare": "git config core.hooksPath .githooks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorillas-cook/Projekt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gorillas-cook/Projekt/issues"
+  },
+  "homepage": "https://github.com/gorillas-cook/Projekt#readme",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "stripe": "^22.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}

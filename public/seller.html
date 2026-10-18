@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кабинет продавца</title>
+</head>
+<body>
+  <h1>Кабинет продавца</h1>
+  <form id="create" hidden>
+    <label>Email <input name="email" type="email" required></label>
+    <label>Название <input name="displayName" required></label>
+    <label>Страна (ISO) <input name="country" required maxlength="2" placeholder="de"></label>
+    <button>Стать продавцом</button>
+  </form>
+  <p id="status"></p>
+  <div id="banner"></div>
+  <div id="onboarding"></div>
+  <div id="management"></div>
+  <div id="payments"></div>
+  <div id="payouts"></div>
+  <p id="error" role="alert"></p>
+  <script src="https://connect-js.stripe.com/v1.0/connect.js" async></script>
+  <script type="module" src="/seller.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+#!/bin/sh
+# Block commits that contain Stripe secret/restricted keys or webhook secrets.
+if git diff --cached -U0 | grep -E '^\+' | grep -qE '(sk|rk)_(test|live)_[0-9A-Za-z]{10,}|whsec_[0-9A-Za-z]{20,}'; then
+  echo "pre-commit: a Stripe key or webhook secret is staged. Move it to .env / your secrets vault." >&2
+  exit 1
+fi

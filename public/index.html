@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Маркетплейс — покупка</title>
+</head>
+<body>
+  <h1>Покупка у продавца</h1>
+  <p><a href="/seller.html">Кабинет продавца</a></p>
+  <form id="buy">
+    <label>ID продавца <input name="sellerUserId" required></label>
+    <label>Price ID <input name="priceId" required placeholder="price_..."></label>
+    <label><input type="checkbox" name="subscription"> Подписка</label>
+    <button>Оплатить</button>
+  </form>
+  <button id="portal">Управление подписками</button>
+  <p id="error" role="alert"></p>
+  <script type="module" src="/index.js"></script>
+</body>
+</html>
